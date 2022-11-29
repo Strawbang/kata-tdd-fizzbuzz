@@ -16,4 +16,9 @@ describe('FizzBuzz', ()=> {
         const actual : number | String = FizzBuzz(input);
         expect(actual).toBe('FizzBuzz');
     })
+    test('should return same number when the input is not divisible by 3 / 5 / 3 and 5', () => {
+        const input : number = 1;
+        const actual : number | String = FizzBuzz(input);
+        expect(actual).toBe(input);
+    })
 })
