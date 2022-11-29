@@ -6,4 +6,9 @@ describe('FizzBuzz', ()=> {
         const actual : number | String = FizzBuzz(input);
         expect(actual).toBe('Fizz');
     })
+    test('should return Buzz when the input is divisible by 5', () => {
+        const input : number = 50;
+        const actual : number | String = FizzBuzz(input);
+        expect(actual).toBe('Buzz');
+    })
 })

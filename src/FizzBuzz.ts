@@ -4,5 +4,9 @@ export const FizzBuzz = (number: number) : number | String => {
         return ('Fizz');
     }
 
+    if (number% 5 === 0) {
+        return ('Buzz')
+    }
+
     return number;
 }
