@@ -1,4 +1,4 @@
-import { FizzBuzz } from '../FizzBuzz';
+import { FizzBuzz, FizzBuzzF } from '../FizzBuzz';
 
 describe('FizzBuzz', ()=> {
     test('should return Fizz when the input is divisible by 3', () => {
@@ -20,5 +20,18 @@ describe('FizzBuzz', ()=> {
         const input : number = 1;
         const actual : number | String = FizzBuzz(input);
         expect(actual).toBe(input);
+    })
+})
+
+describe('FizzBuzzF', ()=> {
+    test.each([
+        ["Fizz", 147],
+        ["Buzz", 50],
+        ["FizzBuzz", 30],
+        ["1", 1]
+    ])("Should return '%s' when the input is '%d'", (text, number) => {
+        const input : number = number;
+        const actual : String = FizzBuzzF(input);
+        expect(actual).toBe(text);
     })
 })
